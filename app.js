@@ -11,7 +11,9 @@ const http = new easyHTTP;
 // });
 
 // Get Single Post
-// http.get('https://jsonplaceholder.typicode.com/posts/27', function(err, post) {
+//http.get('https://jsonplaceholder.typicode.com/posts/101', function(err, post) {
+// http.get('https://jsonplaceholder.typicode.com/posts?userId=101', function(err, post) {  
+//   ///posts?userId=1
 //   if(err) {
 //     console.log(err);
 //   } else {
@@ -20,3 +22,21 @@ const http = new easyHTTP;
 // });
 
 
+//sample data
+const data = {
+  //userId:1,
+  title: 'Malaynium x',
+  body: 'This is a custom post'
+};
+
+
+// create Post
+// http.post('https://jsonplaceholder.typicode.com/posts', data, function(err, post) {
+http.post('https://jsonplaceholder.typicode.com/posts', data, function(err, post) {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log(post);
+  }
+
+});
