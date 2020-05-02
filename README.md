@@ -2,6 +2,7 @@
   * Easy http library build in es5 javascript
   * Build a custom http library using ajax callback in prototype pattern.(no class)
   * The purpose build + using library is making thinsg easier and fast dev.
+  * use json data api at https://jsonplaceholder.typicode.com
 
 # Lesson End Game?
   * crud library using ajax and callback to fetch jason data from online api.
