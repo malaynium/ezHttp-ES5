@@ -51,3 +51,13 @@ http.post('https://jsonplaceholder.typicode.com/posts', data, function(err, post
     }
   
   });
+
+  // Delete Post
+  http.delete('https://jsonplaceholder.typicode.com/posts/5', function(err, response) {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log(response);
+    }
+  
+  });
