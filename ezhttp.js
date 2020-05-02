@@ -4,6 +4,19 @@ function easyHTTP() {
 }
 
 // Make an HTTP POST (create) Request Prototype
+easyHTTP.prototype.post = function(url, data, callback) {
+  this.http.open('POST', url, true);
+  this.http.setRequestHeader('Content-type', 'application/json');
+
+  let self = this;
+  this.http.onload = function(){
+    callback(null, self.http.responseText);
+  }
+
+  this.http.send(JSON.stringify(data));
+  
+
+}
 
 
 // Make an HTTP GET (read) Request Prototype
